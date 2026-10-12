@@ -1,31 +1,35 @@
 {
-  "keywords": [
-    "tech", "technology", "software", "ai", "artificial intelligence", "it services", "infosys", "tcs", "wipro", "hcl", "tech mahindra",
-    "accenture", "cognizant", "microsoft", "google", "alphabet", "apple", "amazon", "meta", "nvidia", "openai", "anthropic",
-    "chip", "semiconductor", "cloud", "data center", "data centre", "cyber", "cybersecurity", "hack", "hacked", "hackers", "startup", "digital", "internet", "apps", "robot", "robotics", "chips", "startups", "quantum",
-    "5g", "telecom", "layoff", "hiring", "jobs", "h-1b", "visa", "it sector", "it firm", "it company", "gcc", "saas",
-    "computing", "developer", "coding", "automation", "electronics", "smartphone", "fintech", "upi", "ibm", "oracle", "salesforce"
-  ],
+  "windowDays": 7,
+  "perSource": 12,
   "feeds": [
     {
-      "id": "reuters",
-      "name": "Reuters",
-      "url": "https://news.google.com/rss/search?q=when:7d+site:reuters.com+(technology+OR+software+OR+%22artificial+intelligence%22+OR+semiconductor)&hl=en-IN&gl=IN&ceid=IN:en"
+      "id": "hn",
+      "name": "Hacker News",
+      "type": "hn",
+      "license": "Titles and links via the public HN Search API",
+      "url": "https://hn.algolia.com/api/v1/search?tags=story&numericFilters=created_at_i%3E{since},points%3E150&hitsPerPage=40"
     },
     {
-      "id": "pti",
-      "name": "PTI",
-      "url": "https://news.google.com/rss/search?q=when:7d+site:ptinews.com+(technology+OR+software+OR+%22IT+sector%22+OR+Infosys+OR+TCS+OR+startup+OR+AI)&hl=en-IN&gl=IN&ceid=IN:en"
+      "id": "devto",
+      "name": "DEV Community",
+      "type": "devto",
+      "license": "Titles and excerpts via the public Forem API",
+      "url": "https://dev.to/api/articles?tag=career&top=7&per_page=30"
     },
     {
-      "id": "yahoo",
-      "name": "Yahoo Finance",
-      "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=INFY,WIT,ACN,MSFT,GOOGL,NVDA,IBM&region=US&lang=en-US"
+      "id": "conversation",
+      "name": "The Conversation",
+      "type": "atom",
+      "license": "CC BY-ND 4.0",
+      "showSummary": false,
+      "url": "https://theconversation.com/topics/artificial-intelligence-ai-90/articles.atom"
     },
     {
-      "id": "wsj",
-      "name": "Wall Street Journal",
-      "url": "https://news.google.com/rss/search?q=when:7d+site:wsj.com+(technology+OR+software+OR+AI+OR+chip)&hl=en-US&gl=US&ceid=US:en"
+      "id": "globalvoices",
+      "name": "Global Voices",
+      "type": "rss",
+      "license": "CC BY 3.0",
+      "url": "https://globalvoices.org/-/topics/technology/feed/"
     }
   ]
 }

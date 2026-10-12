@@ -1,9 +1,10 @@
-// Optional Cloudflare Worker that lets the browser "Refresh live" button read RSS feeds.
+// Optional Cloudflare Worker that lets "Refresh live" read the RSS/Atom feeds in the browser
+// (Hacker News and DEV are JSON APIs with CORS and don't need it).
 // Only hosts used in data/feeds.json are allowed, so it can't be abused as an open proxy.
 // Deploy: npx wrangler deploy proxy/worker.js --name itl-news --compatibility-date 2024-09-01
 // Then set CONFIG.rssProxy in js/app.js to 'https://itl-news.<your-subdomain>.workers.dev/?url='
 
-const ALLOWED_HOSTS = ['news.google.com', 'feeds.finance.yahoo.com', 'feeds.a.dj.com'];
+const ALLOWED_HOSTS = ['theconversation.com', 'globalvoices.org'];
 
 export default {
   async fetch(request) {

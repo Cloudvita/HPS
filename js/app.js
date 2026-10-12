@@ -1,19 +1,23 @@
-// IT Launchpad — front-end logic (vanilla JS, no build step)
+// IT Launchpad — front-end logic (vanilla JS module, no build step)
+import { feedUrl, parseFeed, finalize, isJsonFeed } from './feeds-core.js';
 
 const CONFIG = {
   newsUrl: 'data/news.json',
   feedsUrl: 'data/feeds.json',
   postsUrl: 'data/posts.json',
-  // Optional: URL of your deployed proxy/worker.js (e.g. 'https://itl-news.<you>.workers.dev/?url=').
-  // RSS feeds block cross-origin requests, so in-browser "Refresh live" needs it.
-  // Leave empty to rely only on the weekly GitHub Action that rewrites data/news.json.
+  // JSON APIs (Hacker News, DEV) are fetched directly in "Refresh live".
+  // RSS/Atom feeds block cross-origin requests, so they need a proxy: optionally deploy
+  // proxy/worker.js and set e.g. 'https://itl-news.<you>.workers.dev/?url='.
+  // Without it, those sources keep the stories from the weekly data/news.json.
   rssProxy: '',
   maxAgeDays: 7,       // auto-refresh in the browser when data is older than this
   pageSize: 12,
-  perSource: 12,
+  // Contact form delivery via FormSubmit (https://formsubmit.co). Use the random alias
+  // FormSubmit emails you after activation, never the plain address (see README).
+  contactEndpoint: 'https://formsubmit.co/ajax/YOUR_FORMSUBMIT_ALIAS',
 };
 
-const SOURCE_COLORS = { reuters: 'var(--src-reuters)', pti: 'var(--src-pti)', yahoo: 'var(--src-yahoo)', wsj: 'var(--src-wsj)' };
+const SOURCE_COLORS = { hn: 'var(--src-hn)', devto: 'var(--src-devto)', conversation: 'var(--src-conversation)', globalvoices: 'var(--src-globalvoices)' };
 const LIVE_CACHE_KEY = 'itl-live-news';
 const $ = (sel) => document.querySelector(sel);
 
@@ -23,7 +27,6 @@ const store = {
 };
 
 const escapeHtml = (s = '') => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const stripTags = (s = '') => new DOMParser().parseFromString(s, 'text/html').body.textContent.replace(/\s+/g, ' ').trim();
 
 function timeAgo(iso) {
   const diff = (Date.now() - Date.parse(iso)) / 1000;
@@ -55,7 +58,7 @@ function initTheme() {
 }
 
 /* ---------------- News ---------------- */
-const news = { all: [], feeds: [], keywords: null, source: 'all', query: '', shown: CONFIG.pageSize, generatedAt: null, live: false };
+const news = { all: [], config: null, feeds: [], source: 'all', query: '', shown: CONFIG.pageSize, generatedAt: null, live: false };
 
 async function loadNews() {
   $('#newsGrid').innerHTML = Array(6).fill('<div class="card skeleton"></div>').join('');
@@ -63,8 +66,11 @@ async function loadNews() {
     fetch(CONFIG.feedsUrl).then((r) => r.json()),
     fetch(CONFIG.newsUrl, { cache: 'no-cache' }).then((r) => r.json()).catch(() => ({ articles: [] })),
   ]);
+  news.config = feedCfg;
   news.feeds = feedCfg.feeds;
-  news.keywords = new RegExp(`\\b(${feedCfg.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i');
+  $('#statSources').textContent = news.feeds.length;
+  $('#sourceCredits').textContent = `News is collected weekly from open APIs and openly licensed feeds: ${
+    news.feeds.map((f) => `${f.name} (${f.license})`).join(' · ')}.`;
   setNews(data.articles, data.generatedAt, false);
 
   // Prefer a newer live cache saved by this browser
@@ -74,10 +80,7 @@ async function loadNews() {
   }
   // Weekly auto-update: if what we have is older than maxAgeDays, refresh live
   const age = Date.now() - Date.parse(news.generatedAt || 0);
-  if (age > CONFIG.maxAgeDays * 86400000) {
-    if (CONFIG.rssProxy) refreshLive();
-    else $('#newsMeta').textContent += ' · this digest is more than a week old';
-  }
+  if (age > CONFIG.maxAgeDays * 86400000) refreshLive();
 }
 
 function setNews(articles, generatedAt, live) {
@@ -89,7 +92,7 @@ function setNews(articles, generatedAt, live) {
   renderChips();
   renderNews();
   const when = generatedAt ? new Date(generatedAt).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'never';
-  $('#newsMeta').textContent = `Last 7 days of IT & tech headlines · updated ${when}${live ? ' (live refresh)' : ''}`;
+  $('#newsMeta').textContent = `Last ${news.config?.windowDays || 7} days of tech headlines · updated ${when}${live ? ' (live refresh)' : ''}`;
 }
 
 function renderChips() {
@@ -122,22 +125,10 @@ function renderNews() {
 }
 
 async function fetchFeedLive(feed) {
-  const res = await fetch(CONFIG.rssProxy + encodeURIComponent(feed.url));
+  const url = feedUrl(feed, news.config.windowDays);
+  const res = await fetch(isJsonFeed(feed) ? url : CONFIG.rssProxy + encodeURIComponent(url));
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const xml = new DOMParser().parseFromString(await res.text(), 'text/xml');
-  const isGoogle = feed.url.includes('news.google.com');
-  return [...xml.querySelectorAll('item')].map((item) => {
-    const get = (tag) => item.querySelector(tag)?.textContent.trim() || '';
-    const title = get('title');
-    return {
-      title: isGoogle ? title.replace(/\s+-\s+[^-]+$/, '') : title,
-      link: get('link'),
-      published: new Date(get('pubDate') || Date.now()).toISOString(),
-      source: feed.id,
-      sourceName: feed.name,
-      summary: isGoogle ? '' : stripTags(get('description')).slice(0, 280),
-    };
-  });
+  return parseFeed(feed, await res.text());
 }
 
 async function refreshLive() {
@@ -145,21 +136,14 @@ async function refreshLive() {
   btn.disabled = true;
   btn.textContent = '↻ Refreshing…';
   try {
-    const results = await Promise.allSettled(news.feeds.map(fetchFeedLive));
-    const cutoff = Date.now() - 7 * 86400000;
-    const seen = new Set();
-    const perSource = {};
-    const articles = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []))
-      .filter((a) => a.title && Date.parse(a.published) >= cutoff && news.keywords.test(`${a.title} ${a.summary}`))
-      .sort((a, b) => Date.parse(b.published) - Date.parse(a.published))
-      .filter((a) => {
-        const key = a.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 60);
-        if (seen.has(key)) return false;
-        seen.add(key);
-        perSource[a.source] = (perSource[a.source] || 0) + 1;
-        return perSource[a.source] <= CONFIG.perSource;
-      });
-    if (!articles.length) throw new Error('No articles returned');
+    const live = news.feeds.filter((f) => isJsonFeed(f) || CONFIG.rssProxy);
+    const results = await Promise.allSettled(live.map(fetchFeedLive));
+    const refreshed = new Set(live.filter((_, i) => results[i].status === 'fulfilled').map((f) => f.id));
+    if (!refreshed.size) throw new Error('No sources reachable');
+    // Keep weekly-file stories for sources that couldn't be fetched live
+    const fresh = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
+    const kept = news.all.filter((a) => !refreshed.has(a.source));
+    const articles = finalize([...fresh, ...kept], news.config);
     const payload = { generatedAt: new Date().toISOString(), articles };
     store.set(LIVE_CACHE_KEY, payload);
     setNews(articles, payload.generatedAt, true);
@@ -183,7 +167,6 @@ function initNews() {
   });
   $('#newsSearch').addEventListener('input', (e) => { news.query = e.target.value.trim(); news.shown = CONFIG.pageSize; renderNews(); });
   $('#moreNews').addEventListener('click', () => { news.shown += CONFIG.pageSize; renderNews(); });
-  $('#refreshNews').hidden = !CONFIG.rssProxy;
   $('#refreshNews').addEventListener('click', refreshLive);
   loadNews().catch((err) => {
     console.error(err);
@@ -267,9 +250,78 @@ function initCareers() {
   update();
 }
 
+/* ---------------- Student contact form ---------------- */
+function initContact() {
+  const form = $('#contactForm');
+  const status = $('#formStatus');
+  const setStatus = (msg, kind) => { status.textContent = msg; status.className = `form-status ${kind || ''}`; };
+
+  // "Request details" buttons preselect the program and jump to the form
+  $('.tutor-grid').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-topic]');
+    if (!btn) return;
+    form.topic.value = btn.dataset.topic;
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.name.focus({ preventScroll: true });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.classList.add('validated');
+      setStatus('Please fill in all fields with a valid phone number and email.', 'error');
+      form.querySelector(':invalid')?.focus();
+      return;
+    }
+    if (form._honey.value) return; // bot
+
+    if (CONFIG.contactEndpoint.includes('YOUR_FORMSUBMIT_ALIAS')) {
+      console.warn('Contact form not configured: set CONFIG.contactEndpoint in js/app.js');
+      setStatus('Online requests are temporarily unavailable. Please try again soon.', 'error');
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form));
+    const submit = form.querySelector('[type="submit"]');
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    setStatus('');
+    try {
+      const res = await fetch(CONFIG.contactEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: data.name.trim(),
+          phone: data.phone.trim(),
+          email: data.email.trim(),
+          program: data.topic,
+          message: data.message.trim(),
+          _subject: `New tutoring enquiry: ${data.topic} — ${data.name.trim()}`,
+          _replyto: data.email.trim(),
+          _template: 'table',
+          _captcha: 'false',
+          _honey: '',
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || `HTTP ${res.status}`);
+      form.reset();
+      form.classList.remove('validated');
+      setStatus(`Thank you, ${data.name.trim().split(' ')[0]}! Your request has been received. One of our support personnel will contact you shortly.`, 'success');
+    } catch (err) {
+      console.warn('Contact form failed:', err);
+      setStatus('Sorry, we couldn\'t send your request right now. Please try again in a few minutes.', 'error');
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Submit request';
+    }
+  });
+}
+
 /* ---------------- Boot ---------------- */
 $('#year').textContent = new Date().getFullYear();
 initTheme();
 initNews();
 initBlog();
 initCareers();
+initContact();

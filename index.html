@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IT Launchpad</title>
-  <meta name="description" content="Weekly IT industry news, a personal blog and practical career guidance for fresh entrants into the IT industry.">
+  <meta name="description" content="Weekly IT industry news, a personal blog, career guidance for IT freshers, and SAT, math and robotics tutoring for students.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
         <a href="#news">Industry News</a>
         <a href="#blog">Blog</a>
         <a href="#careers">Career Guide</a>
-        <a href="#about">About</a>
+        <a href="#students">Student Resources</a>
         <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">◐</button>
       </nav>
     </div>
@@ -32,15 +32,17 @@
       <div class="container hero-inner">
         <p class="eyebrow">For freshers &amp; early-career techies</p>
         <h1>Launch your IT career with <span class="grad">clarity</span>.</h1>
-        <p class="lead">Weekly industry news from trusted sources, honest stories from the field, and a practical roadmap for your first years in tech.</p>
+        <p class="lead">Weekly tech news from open sources, honest stories from the field, and a practical roadmap for your first years in tech.</p>
         <div class="hero-cta">
           <a href="#careers" class="btn btn-primary">Explore career paths</a>
+          <a href="#students" class="btn btn-ghost">Student tutoring</a>
           <a href="#news" class="btn btn-ghost">This week's news →</a>
         </div>
         <div class="hero-stats">
           <div><strong id="statNews">—</strong><span>stories this week</span></div>
-          <div><strong>4</strong><span>trusted sources</span></div>
+          <div><strong id="statSources">—</strong><span>open news sources</span></div>
           <div><strong>5</strong><span>career tracks</span></div>
+          <div><strong>3</strong><span>tutoring programs</span></div>
         </div>
       </div>
     </section>
@@ -124,14 +126,79 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section alt">
-      <div class="container about">
-        <div class="avatar" aria-hidden="true">👋</div>
-        <div>
-          <h2>About Me</h2>
-          <p>I'm an IT professional who has worked across software delivery, cloud and team leadership. I started this site to give newcomers the honest, practical guidance I wish I'd had when I started, plus a quick weekly view of what's moving in the industry.</p>
-          <p class="muted small">Edit this section in <code>index.html</code> to tell your own story.</p>
+    <!-- STUDENT RESOURCES -->
+    <section id="students" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Student resources</p>
+            <h2>Tutoring &amp; Learning Support</h2>
+            <p class="muted">One-on-one and small-group tutoring for school students, plus free resources to practise between sessions.</p>
+          </div>
+        </div>
+
+        <div class="tutor-grid">
+          <article class="card tutor-card">
+            <div class="tutor-icon">📝</div>
+            <h3>SAT Tutoring</h3>
+            <p class="muted">Structured preparation for the digital SAT, with diagnostic tests, targeted practice and test-day strategy.</p>
+            <ul class="pill-list"><li>Math</li><li>Reading &amp; Writing</li><li>Full-length practice tests</li><li>Time management</li></ul>
+            <button class="btn btn-small" data-topic="SAT Tutoring">Request details →</button>
+          </article>
+          <article class="card tutor-card">
+            <div class="tutor-icon">➗</div>
+            <h3>Middle &amp; High School Math</h3>
+            <p class="muted">Build strong foundations and confidence, from pre-algebra through calculus, aligned to the student's school curriculum.</p>
+            <ul class="pill-list"><li>Pre-Algebra</li><li>Algebra I &amp; II</li><li>Geometry</li><li>Pre-Calculus</li><li>Calculus</li></ul>
+            <button class="btn btn-small" data-topic="Middle & High School Math Tutoring">Request details →</button>
+          </article>
+          <article class="card tutor-card">
+            <div class="tutor-icon">🤖</div>
+            <h3>Robotics Tutoring</h3>
+            <p class="muted">Hands-on robotics: design, build and program robots while learning engineering and coding fundamentals.</p>
+            <ul class="pill-list"><li>LEGO &amp; VEX</li><li>Arduino</li><li>Python &amp; block coding</li><li>Competition prep</li></ul>
+            <button class="btn btn-small" data-topic="Robotics Tutoring">Request details →</button>
+          </article>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="card contact-card">
+            <h3>Request tutoring details</h3>
+            <p class="muted small">Tell us a little about the student and what you're looking for. We'll get back to you with schedules and fees.</p>
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <label>Full name<input name="name" type="text" autocomplete="name" required maxlength="80"></label>
+                <label>Phone<input name="phone" type="tel" autocomplete="tel" required pattern="[0-9+()\-\s]{7,20}" placeholder="+1 555 123 4567"></label>
+              </div>
+              <label>Email<input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+              <label>Program
+                <select name="topic" required>
+                  <option value="">Select a program…</option>
+                  <option>SAT Tutoring</option>
+                  <option>Middle &amp; High School Math Tutoring</option>
+                  <option>Robotics Tutoring</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Brief description<textarea name="message" rows="4" required maxlength="1000" placeholder="Student's grade, subjects or goals, preferred times…"></textarea></label>
+              <!-- Honeypot field to catch spam bots; hidden from people -->
+              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <button type="submit" class="btn btn-primary">Submit request</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="card guide">
+            <h3>📚 Free Practice Resources</h3>
+            <ul class="links">
+              <li><a href="https://www.khanacademy.org/math" target="_blank" rel="noopener">Khan Academy Math</a> — every grade, free</li>
+              <li><a href="https://satsuite.collegeboard.org/practice" target="_blank" rel="noopener">College Board SAT Practice</a> — official tests &amp; Bluebook app</li>
+              <li><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos</a> — the graphing calculator built into the digital SAT</li>
+              <li><a href="https://www.firstinspires.org/" target="_blank" rel="noopener">FIRST Robotics</a> — robotics programs &amp; competitions</li>
+              <li><a href="https://www.tinkercad.com/" target="_blank" rel="noopener">Tinkercad</a> — free 3D design &amp; Arduino circuit simulator</li>
+              <li><a href="https://code.org/" target="_blank" rel="noopener">Code.org</a> — beginner-friendly coding courses</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -139,8 +206,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> IT Launchpad. Headlines link to the original publishers; all rights belong to them.</p>
-      <p class="muted small">News is collected weekly from public RSS feeds (Reuters, PTI, Yahoo Finance, WSJ).</p>
+      <p>© <span id="year"></span> IT Launchpad. Headlines link to the original publishers.</p>
+      <p class="muted small" id="sourceCredits">News is collected weekly from open APIs and openly licensed feeds.</p>
     </div>
   </footer>
 
@@ -151,6 +218,6 @@
   </dialog>
 
   <script src="js/careers.js"></script>
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
