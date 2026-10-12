@@ -1,0 +1,29 @@
+[
+  {
+    "id": "first-90-days",
+    "title": "My First 90 Days in IT: What I Wish Someone Had Told Me",
+    "date": "2026-10-05",
+    "tags": ["Career", "Freshers"],
+    "readMins": 6,
+    "excerpt": "Onboarding is overwhelming. Here is how to turn the first three months into a launchpad instead of a blur.",
+    "body": "<p>Your first job in IT rarely looks like the projects you built in college. There is a codebase older than you, tools you have never heard of, and acronyms in every meeting. That is normal.</p><h3>1. Learn the system before you change it</h3><p>Spend your first two weeks reading: architecture docs, recent pull requests, incident reports. Draw the system on paper. You will ask far better questions.</p><h3>2. Keep a work journal</h3><p>Write down what you did, what you learned and who helped you, every day. It becomes your appraisal material, your interview story bank, and a cure for impostor syndrome.</p><h3>3. Ship something small in month one</h3><p>A bug fix, a doc improvement, a test. Getting a change through review, CI and deployment teaches you the whole delivery pipeline.</p><h3>4. Find two mentors</h3><p>One senior engineer for technical depth, and one peer a year or two ahead of you who remembers what being new feels like.</p><p>Above all: ask questions early. Nobody expects a fresher to know everything, but everyone notices someone who stays stuck in silence.</p>"
+  },
+  {
+    "id": "ai-and-freshers",
+    "title": "Will AI Replace Entry-Level Developers? A Practical View",
+    "date": "2026-09-21",
+    "tags": ["AI", "Skills"],
+    "readMins": 5,
+    "excerpt": "AI coding assistants are changing what 'junior' work looks like. The opportunity is bigger than the threat — if you adapt.",
+    "body": "<p>AI assistants now write boilerplate, tests and first drafts of code. That changes the entry-level job, but it does not remove it.</p><h3>What is shrinking</h3><p>Pure syntax work and copy-paste tasks. If your only skill is translating a spec line-by-line into code, that is at risk.</p><h3>What is growing</h3><ul><li><strong>Reviewing and verifying</strong> AI-generated code for correctness and security.</li><li><strong>Problem framing</strong>: breaking an ambiguous business need into precise tasks.</li><li><strong>Systems thinking</strong>: understanding data flow, failure modes and cost.</li><li><strong>Domain knowledge</strong> in banking, healthcare, retail or manufacturing.</li></ul><h3>How to adapt</h3><p>Use AI tools daily, but always be able to explain every line you commit. Strengthen fundamentals — data structures, networking, databases — because they are what lets you judge whether the AI is right.</p>"
+  },
+  {
+    "id": "resume-that-gets-shortlisted",
+    "title": "Writing a Fresher Resume That Actually Gets Shortlisted",
+    "date": "2026-09-07",
+    "tags": ["Resume", "Job Search"],
+    "readMins": 4,
+    "excerpt": "Recruiters spend seconds on each resume. Make yours easy to scan, specific, and backed by proof.",
+    "body": "<p>Most fresher resumes look identical: the same skills list, the same college project. Here is how to stand out.</p><h3>Keep it to one page</h3><p>Use a clean single-column layout so applicant tracking systems can parse it.</p><h3>Lead with projects, not objectives</h3><p>Replace the 'career objective' with two or three projects. For each: what you built, the tech used, and a measurable result (users, speed-up, accuracy).</p><h3>Show proof</h3><p>Link your GitHub, a deployed demo, or a technical blog. A live link is worth more than ten listed skills.</p><h3>Tailor for every application</h3><p>Mirror the keywords in the job description — honestly. If it says 'REST APIs' and you built one, say exactly that.</p>"
+  }
+]

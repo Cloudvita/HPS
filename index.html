@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT Launchpad</title>
+  <meta name="description" content="Weekly IT industry news, a personal blog and practical career guidance for fresh entrants into the IT industry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand"><span class="brand-mark">IT</span> Launchpad</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="#news">Industry News</a>
+        <a href="#blog">Blog</a>
+        <a href="#careers">Career Guide</a>
+        <a href="#about">About</a>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">For freshers &amp; early-career techies</p>
+        <h1>Launch your IT career with <span class="grad">clarity</span>.</h1>
+        <p class="lead">Weekly industry news from trusted sources, honest stories from the field, and a practical roadmap for your first years in tech.</p>
+        <div class="hero-cta">
+          <a href="#careers" class="btn btn-primary">Explore career paths</a>
+          <a href="#news" class="btn btn-ghost">This week's news →</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="statNews">—</strong><span>stories this week</span></div>
+          <div><strong>4</strong><span>trusted sources</span></div>
+          <div><strong>5</strong><span>career tracks</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Weekly digest</p>
+            <h2>Industry News</h2>
+            <p class="muted" id="newsMeta">Loading…</p>
+          </div>
+          <div class="news-actions">
+            <input id="newsSearch" type="search" placeholder="Search headlines…" aria-label="Search headlines">
+            <button id="refreshNews" class="btn btn-small">↻ Refresh live</button>
+          </div>
+        </div>
+        <div class="chips" id="sourceChips" role="tablist" aria-label="Filter by source"></div>
+        <div class="news-grid" id="newsGrid"></div>
+        <button id="moreNews" class="btn btn-ghost center" hidden>Show more</button>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Personal blog</p>
+            <h2>Notes from the Field</h2>
+            <p class="muted">Lessons, opinions and stories from my journey in IT.</p>
+          </div>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section id="careers" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Career guidance</p>
+            <h2>Find Your Path in IT</h2>
+            <p class="muted">Pick a track to see the skills, starter roles, certifications and a 6-month learning plan.</p>
+          </div>
+        </div>
+        <div class="tabs" id="trackTabs" role="tablist"></div>
+        <div class="track-panel" id="trackPanel"></div>
+
+        <div class="guide-grid">
+          <article class="card guide">
+            <h3>✅ Job-Ready Checklist</h3>
+            <p class="muted small">Your progress is saved in this browser.</p>
+            <ul class="checklist" id="checklist"></ul>
+            <div class="progress"><div class="progress-bar" id="checkProgress"></div></div>
+          </article>
+          <article class="card guide">
+            <h3>🎯 Interview Prep Essentials</h3>
+            <ol class="steps">
+              <li><strong>Aptitude &amp; logic</strong> — most service-company drives start with an online test.</li>
+              <li><strong>DSA basics</strong> — arrays, strings, hashing, recursion, sorting. Solve 2 problems a day.</li>
+              <li><strong>Core CS</strong> — OOP, DBMS &amp; SQL joins, OS processes/threads, HTTP &amp; networking.</li>
+              <li><strong>Your projects</strong> — explain design choices, trade-offs and what you'd improve.</li>
+              <li><strong>HR round</strong> — prepare STAR stories: a challenge, a failure, a team conflict.</li>
+            </ol>
+          </article>
+          <article class="card guide">
+            <h3>📚 Free Learning Resources</h3>
+            <ul class="links">
+              <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a> — full-stack, Python, data</li>
+              <li><a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener">Harvard CS50</a> — computer science foundations</li>
+              <li><a href="https://roadmap.sh/" target="_blank" rel="noopener">roadmap.sh</a> — role-wise skill roadmaps</li>
+              <li><a href="https://nptel.ac.in/" target="_blank" rel="noopener">NPTEL</a> — IIT-taught courses with certificates</li>
+              <li><a href="https://learn.microsoft.com/training/" target="_blank" rel="noopener">Microsoft Learn</a> — Azure &amp; AI fundamentals</li>
+              <li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a> — hands-on ML &amp; SQL</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="container about">
+        <div class="avatar" aria-hidden="true">👋</div>
+        <div>
+          <h2>About Me</h2>
+          <p>I'm an IT professional who has worked across software delivery, cloud and team leadership. I started this site to give newcomers the honest, practical guidance I wish I'd had when I started, plus a quick weekly view of what's moving in the industry.</p>
+          <p class="muted small">Edit this section in <code>index.html</code> to tell your own story.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> IT Launchpad. Headlines link to the original publishers; all rights belong to them.</p>
+      <p class="muted small">News is collected weekly from public RSS feeds (Reuters, PTI, Yahoo Finance, WSJ).</p>
+    </div>
+  </footer>
+
+  <!-- Blog post reader -->
+  <dialog id="postDialog" class="post-dialog">
+    <button class="icon-btn close" aria-label="Close" id="closePost">✕</button>
+    <article id="postContent"></article>
+  </dialog>
+
+  <script src="js/careers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

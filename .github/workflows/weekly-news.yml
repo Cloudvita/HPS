@@ -1,0 +1,32 @@
+name: Weekly news update
+
+on:
+  schedule:
+    - cron: '30 2 * * 1'   # Every Monday 02:30 UTC (08:00 IST)
+  workflow_dispatch:        # Allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest headlines
+        run: node scripts/update-news.mjs
+        env:
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}   # optional
+
+      - name: Commit updated news.json
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add data/news.json
+          git diff --cached --quiet || git commit -m "chore: weekly news update $(date -u +%F)"
+          git push

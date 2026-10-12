@@ -1,0 +1,31 @@
+{
+  "keywords": [
+    "tech", "technology", "software", "ai", "artificial intelligence", "it services", "infosys", "tcs", "wipro", "hcl", "tech mahindra",
+    "accenture", "cognizant", "microsoft", "google", "alphabet", "apple", "amazon", "meta", "nvidia", "openai", "anthropic",
+    "chip", "semiconductor", "cloud", "data center", "data centre", "cyber", "cybersecurity", "hack", "hacked", "hackers", "startup", "digital", "internet", "apps", "robot", "robotics", "chips", "startups", "quantum",
+    "5g", "telecom", "layoff", "hiring", "jobs", "h-1b", "visa", "it sector", "it firm", "it company", "gcc", "saas",
+    "computing", "developer", "coding", "automation", "electronics", "smartphone", "fintech", "upi", "ibm", "oracle", "salesforce"
+  ],
+  "feeds": [
+    {
+      "id": "reuters",
+      "name": "Reuters",
+      "url": "https://news.google.com/rss/search?q=when:7d+site:reuters.com+(technology+OR+software+OR+%22artificial+intelligence%22+OR+semiconductor)&hl=en-IN&gl=IN&ceid=IN:en"
+    },
+    {
+      "id": "pti",
+      "name": "PTI",
+      "url": "https://news.google.com/rss/search?q=when:7d+site:ptinews.com+(technology+OR+software+OR+%22IT+sector%22+OR+Infosys+OR+TCS+OR+startup+OR+AI)&hl=en-IN&gl=IN&ceid=IN:en"
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo Finance",
+      "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=INFY,WIT,ACN,MSFT,GOOGL,NVDA,IBM&region=US&lang=en-US"
+    },
+    {
+      "id": "wsj",
+      "name": "Wall Street Journal",
+      "url": "https://news.google.com/rss/search?q=when:7d+site:wsj.com+(technology+OR+software+OR+AI+OR+chip)&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}
