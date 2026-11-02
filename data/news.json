@@ -1,343 +1,327 @@
 {
-  "generatedAt": "2026-10-26T08:02:10.669Z",
+  "generatedAt": "2026-11-02T09:51:05.853Z",
   "windowDays": 7,
   "errors": [],
   "articles": [
     {
-      "title": "What I'm not good at yet (a student's honest list)",
-      "link": "https://dev.to/suraj_nandan/what-im-not-good-at-yet-a-students-honest-list-1529",
-      "published": "2026-10-26T03:30:00.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "Portfolios list strengths. Here's the other side, because hiding it would make this series... — by SURAJ NANDAN"
+      "title": "AI translation sounds convincing, but it can be riddled with hidden errors",
+      "link": "https://theconversation.com/ai-translation-sounds-convincing-but-it-can-be-riddled-with-hidden-errors-294686",
+      "published": "2026-11-02T01:43:39.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
     },
     {
-      "title": "Devs Learning With AI Scored 17 Points Lower in Anthropic's Trial. Juniors Code Solo First",
-      "link": "https://dev.to/gabrielanhaia/devs-learning-with-ai-scored-17-points-lower-in-anthropics-trial-juniors-code-solo-first-o66",
-      "published": "2026-10-25T13:01:27.000Z",
+      "title": "AI Now Writes 75% of Google's New Code. 46% of Developers Don't Trust the Output. Nobody Wants to Talk About the Second Number.",
+      "link": "https://dev.to/debashish_ghosal/ai-now-writes-75-of-googles-new-code-46-of-developers-dont-trust-the-output-nobody-wants-to-3mk3",
+      "published": "2026-11-01T18:20:26.000Z",
       "source": "devto",
       "sourceName": "DEV Community",
-      "summary": "Anthropic's trial: developers learning a new library with AI scored 50% vs 67% on the quiz, worst on debugging. Juniors should write the first version alone. — by Gabriel Anhaia"
+      "summary": "AI Now Writes 75% of Google's New Code. 46% of Developers Don't Trust the Output. Nobody... — by Debashish Ghosal"
     },
     {
-      "title": "What OpenAI, Anthropic, Mistral and Meta actually ask in AI engineer interviews",
-      "link": "https://dev.to/adityajha2005/what-openai-anthropic-mistral-and-meta-actually-ask-in-ai-engineer-interviews-2adk",
-      "published": "2026-10-25T04:50:35.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "Prepping for an AI engineering interview usually looks like this: twelve tabs of Glassdoor, a Reddit... — by Aditya"
-    },
-    {
-      "title": "My Passion for Coding Isn't 404. It's 503.",
-      "link": "https://dev.to/_boweii/my-passion-for-coding-isnt-404-its-503-446h",
-      "published": "2026-10-24T21:51:05.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "Last month, I signed up for a hackathon. I opened a fresh file and named it ideas.md. Forty-eight... — by Tombri Bowei"
-    },
-    {
-      "title": "We should be more ambitious with the software we build",
-      "link": "https://danluu.com/ambitious/",
-      "published": "2026-10-24T21:47:31.000Z",
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+      "link": "https://hackerbooks.org",
+      "published": "2026-11-01T15:58:28.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "788 points · 705 comments on Hacker News"
+      "summary": "1371 points · 229 comments on Hacker News"
     },
     {
-      "title": "The contract clauses I added after three years of client websites",
-      "link": "https://dev.to/talha442/the-contract-clauses-i-added-after-three-years-of-client-websites-3j3c",
-      "published": "2026-10-24T21:17:19.000Z",
+      "title": "Restrooms along the Norwegian Scenic Routes",
+      "link": "https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/",
+      "published": "2026-11-01T10:47:58.000Z",
+      "source": "hn",
+      "sourceName": "Hacker News",
+      "summary": "691 points · 409 comments on Hacker News"
+    },
+    {
+      "title": "I got rejected from 50 jobs. Then I deleted everything on my resume except one story — and the callbacks started.",
+      "link": "https://dev.to/infoinlet1/i-got-rejected-from-50-jobs-then-i-deleted-everything-on-my-resume-except-one-story-and-the-5dj0",
+      "published": "2026-11-01T10:17:36.000Z",
       "source": "devto",
       "sourceName": "DEV Community",
-      "summary": "I write code. I did not expect to spend so much of my career thinking about contracts. Three years... — by Talha Faisal"
+      "summary": "For about two months, the first thing I did every morning was refresh an inbox, looking for a word... — by Info Inlet"
     },
     {
-      "title": "Show HN: Steal My Bitcoin",
-      "link": "https://stealmybitcoin.com/",
-      "published": "2026-10-24T20:30:31.000Z",
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "link": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "published": "2026-10-31T22:41:06.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "599 points · 441 comments on Hacker News"
+      "summary": "811 points · 206 comments on Hacker News"
     },
     {
-      "title": "No signs of AI payoff outside the tech sector",
-      "link": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
-      "published": "2026-10-24T19:47:19.000Z",
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "link": "https://karpathy.bearblog.dev/hacker-tube/",
+      "published": "2026-10-31T19:56:53.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "621 points · 655 comments on Hacker News"
+      "summary": "2562 points · 566 comments on Hacker News"
     },
     {
-      "title": "Big Tech and authoritarian states: Belarus",
-      "link": "https://globalvoices.org/2026/10/24/big-tech-and-authoritarian-states-belarus/",
-      "published": "2026-10-24T18:11:42.000Z",
+      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "link": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "published": "2026-10-31T19:16:30.000Z",
+      "source": "hn",
+      "sourceName": "Hacker News",
+      "summary": "714 points · 329 comments on Hacker News"
+    },
+    {
+      "title": "Serbia just elected the world's brainiest parliament",
+      "link": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+      "published": "2026-10-31T10:21:30.000Z",
+      "source": "hn",
+      "sourceName": "Hacker News",
+      "summary": "909 points · 503 comments on Hacker News"
+    },
+    {
+      "title": "Your hard work got stolen. What would you do?",
+      "link": "https://dev.to/galascribe/your-hard-work-got-stolen-what-would-you-do-cnf",
+      "published": "2026-10-31T08:53:41.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "I led a rewrite that shipped with almost no critical bugs. Someone else got promoted, and I was the last to know. Two months later I left with a 40% raise. — by Galascribe"
+    },
+    {
+      "title": "The Maintainer Who Wrote \"Sorry, I Missed the Request!\"",
+      "link": "https://dev.to/efe_genc/the-maintainer-who-wrote-sorry-i-missed-the-request-47nl",
+      "published": "2026-10-30T20:21:36.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "Sixteen days of silence on a one-line pull request, one polite reminder, and a maintainer who wrote five words that made a Friday. — by Efe Genc"
+    },
+    {
+      "title": "When chatbots become ‘answer engines’: AI, geopolitics and truth",
+      "link": "https://globalvoices.org/2026/10/30/when-chatbots-become-answer-engines-ai-geopolitics-and-truth/",
+      "published": "2026-10-30T19:30:47.000Z",
       "source": "globalvoices",
       "sourceName": "Global Voices",
-      "summary": "In the latest GV podcast, we discussed why Russia restricts access to many social media services, while Belarus does not impose comparable restrictions; censorship, surveillance, and digital authoritarianism — Belarusian style."
+      "summary": "As AI chatbots become everyday sources of information, research from Kosovo raises questions about how these systems present and sometimes distort geopolitical narratives."
     },
     {
-      "title": "In Brazil’s elections, big techs’ transparency and cooperation policies translate as governance washing, according to this expert",
-      "link": "https://globalvoices.org/2026/10/24/in-brazils-elections-big-techs-transparency-and-cooperation-policies-translate-as-governance-washing-according-to-this-expert/",
-      "published": "2026-10-24T08:55:06.000Z",
+      "title": "I sat through McKinsey's APR framework. Then I ran it on my worst coding habits.",
+      "link": "https://dev.to/tejas1233/i-sat-through-mckinseys-apr-framework-then-i-ran-it-on-my-worst-coding-habits-ek8",
+      "published": "2026-10-30T18:16:32.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "The first time someone said \"Awareness, Pause, Reframe\" out loud, I almost laughed. It was in... — by Tejas"
+    },
+    {
+      "title": "How the streets and a social media army led Lula to a historic win in Brazil",
+      "link": "https://globalvoices.org/2026/10/30/how-the-streets-and-a-social-media-army-led-lula-to-a-historic-win-in-brazil/",
+      "published": "2026-10-30T16:37:15.000Z",
       "source": "globalvoices",
       "sourceName": "Global Voices",
-      "summary": "“Under normal conditions, this is already serious enough, because the platform rules over the information flow in a society, but when you apply it to an electoral dispute, it's even more serious.”"
+      "summary": "After ending the first round 2.2 million votes behind his opponent, Flávio Bolsonaro, Lula won the election with a difference of 4 million votes, and will serve a fourth term as president"
     },
     {
-      "title": "Germany's job board has a free JSON API: 821,306 open jobs and what its facets reveal",
-      "link": "https://dev.to/fast_data_asap/germanys-job-board-has-a-free-json-api-821306-open-jobs-and-what-its-facets-reveal-2116",
-      "published": "2026-10-24T06:47:24.000Z",
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "link": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "published": "2026-10-30T15:52:18.000Z",
+      "source": "hn",
+      "sourceName": "Hacker News",
+      "summary": "670 points · 485 comments on Hacker News"
+    },
+    {
+      "title": "7 Soft Skills Every Software Developer Needs to Succeed",
+      "link": "https://dev.to/sbenhoff/7-soft-skills-every-software-developer-needs-to-succeed-310o",
+      "published": "2026-10-30T15:48:53.000Z",
       "source": "devto",
       "sourceName": "DEV Community",
-      "summary": "The Bundesagentur für Arbeit job search has a public REST API with facet counts. Python code to query it, plus real numbers from today: temp agencies, salary transparency, new jobs per day and where software jobs are. — by Fast Data"
+      "summary": "When it comes to the skills that contribute to success in software development, technical... — by Shelley Benhoff"
     },
     {
-      "title": "Root shell on Samsung TV",
-      "link": "https://twitter.com/log4j/status/2113014142600953868?s=46",
-      "published": "2026-10-24T05:49:57.000Z",
+      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "link": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+      "published": "2026-10-30T12:50:01.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "832 points · 618 comments on Hacker News"
+      "summary": "591 points · 444 comments on Hacker News"
     },
     {
-      "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
-      "link": "https://grapheneos.social/@GrapheneOS/117492375462459244",
-      "published": "2026-10-24T01:15:14.000Z",
-      "source": "hn",
-      "sourceName": "Hacker News",
-      "summary": "678 points · 330 comments on Hacker News"
-    },
-    {
-      "title": "PHP is in the foundation of 70% of websites – here’s what it is and why a flaw in the software is a major hacking threat",
-      "link": "https://theconversation.com/php-is-in-the-foundation-of-70-of-websites-heres-what-it-is-and-why-a-flaw-in-the-software-is-a-major-hacking-threat-294999",
-      "published": "2026-10-23T17:43:01.000Z",
+      "title": "Why it could be a bad idea to get AI to flirt for you",
+      "link": "https://theconversation.com/why-it-could-be-a-bad-idea-to-get-ai-to-flirt-for-you-295274",
+      "published": "2026-10-30T12:26:58.000Z",
       "source": "conversation",
       "sourceName": "The Conversation",
       "summary": ""
     },
     {
-      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-      "link": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-      "published": "2026-10-23T16:59:08.000Z",
-      "source": "hn",
-      "sourceName": "Hacker News",
-      "summary": "1083 points · 673 comments on Hacker News"
-    },
-    {
-      "title": "Today, we hacked what we'd set out to hack: the iPhone",
-      "link": "https://blog.calif.io/p/iphone",
-      "published": "2026-10-23T16:21:50.000Z",
-      "source": "hn",
-      "sourceName": "Hacker News",
-      "summary": "1108 points · 725 comments on Hacker News"
-    },
-    {
-      "title": "Apple Music 404 Not Found",
-      "link": "https://music.apple.com/this-url-doesnt-exist",
-      "published": "2026-10-23T12:28:47.000Z",
-      "source": "hn",
-      "sourceName": "Hacker News",
-      "summary": "931 points · 273 comments on Hacker News"
-    },
-    {
-      "title": "AI Mistakes I Should Have Avoided as a Founder",
-      "link": "https://dev.to/jaideepparashar/ai-mistakes-i-should-have-avoided-as-a-founder-4bg9",
-      "published": "2026-10-23T04:46:55.000Z",
+      "title": "Day 10: How I Hired a CMO for My Startup with a $0 Budget (The Exact Deal) 🐯☁️",
+      "link": "https://dev.to/koda2026/day-10-how-i-hired-a-cmo-for-my-startup-with-a-0-budget-the-exact-deal-3fj",
+      "published": "2026-10-30T12:10:09.000Z",
       "source": "devto",
       "sourceName": "DEV Community",
-      "summary": "When I started exploring AI seriously, I was fascinated by what it could do. Write content. Analyze... — by Jaideep Parashar"
+      "summary": "Day 9 was a massive technical win. I shipped hot reloading, enterprise spinners, and eradicated the... — by Harun - solo dev"
     },
     {
-      "title": "Docker is weird",
-      "link": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
-      "published": "2026-10-22T23:45:56.000Z",
+      "title": "US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech",
+      "link": "https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead",
+      "published": "2026-10-30T12:08:00.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "876 points · 366 comments on Hacker News"
+      "summary": "668 points · 525 comments on Hacker News"
     },
     {
-      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-      "link": "https://edjefferson.com/localwiki/",
-      "published": "2026-10-22T23:01:18.000Z",
+      "title": "Backdoors in official Claude Code extensions",
+      "link": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+      "published": "2026-10-30T11:05:53.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "1688 points · 253 comments on Hacker News"
+      "summary": "661 points · 17 comments on Hacker News"
     },
     {
-      "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
-      "link": "https://news.ycombinator.com/item?id=50200997",
-      "published": "2026-10-22T21:03:55.000Z",
+      "title": "elect.horse",
+      "link": "https://elect.horse/",
+      "published": "2026-10-30T09:14:34.000Z",
       "source": "hn",
       "sourceName": "Hacker News",
-      "summary": "671 points · 744 comments on Hacker News"
+      "summary": "558 points · 155 comments on Hacker News"
     },
     {
-      "title": "Friday essay: AI is devastating higher education, but the system was already broken",
-      "link": "https://theconversation.com/friday-essay-ai-is-devastating-higher-education-but-the-system-was-already-broken-292988",
-      "published": "2026-10-22T18:31:56.000Z",
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "published": "2026-10-30T07:09:12.000Z",
+      "source": "hn",
+      "sourceName": "Hacker News",
+      "summary": "1000 points · 553 comments on Hacker News"
+    },
+    {
+      "title": "Why developers need room to experiment, learn, and build without turning every idea into a business",
+      "link": "https://dev.to/jaideepparashar/not-every-side-project-needs-to-become-a-startup-4dfi",
+      "published": "2026-10-30T06:47:41.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "Imagine spending your weekend building something interesting. Maybe a small weather application. A... — by Jaideep Parashar"
+    },
+    {
+      "title": "Using ChatGPT before a medical appointment? How to get the best support for your health questions",
+      "link": "https://theconversation.com/using-chatgpt-before-a-medical-appointment-how-to-get-the-best-support-for-your-health-questions-294051",
+      "published": "2026-10-29T19:10:06.000Z",
       "source": "conversation",
       "sourceName": "The Conversation",
       "summary": ""
     },
     {
-      "title": "Every AI model has the same \"controversial\" take on humans",
-      "link": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
-      "published": "2026-10-22T16:08:00.000Z",
-      "source": "hn",
-      "sourceName": "Hacker News",
-      "summary": "658 points · 638 comments on Hacker News"
-    },
-    {
-      "title": "An Indie Solo Gamedev's perspective on Public Building(credits to Hanzla Baig for the ideea)",
-      "link": "https://dev.to/startupcafe/an-indie-solo-gamedevs-perspective-on-the-topic-4g2a",
-      "published": "2026-10-22T15:57:55.000Z",
+      "title": "My first freelance client paid me $5. Here's what I'd tell myself at that stage.",
+      "link": "https://dev.to/highcenburg/my-first-freelance-client-paid-me-5-heres-what-id-tell-myself-at-that-stage-16e1",
+      "published": "2026-10-29T14:15:54.000Z",
       "source": "devto",
       "sourceName": "DEV Community",
-      "summary": "Indie game development often begins with something deeply personal you really want to build. An... — by MT Indie Dev"
+      "summary": "My first paid freelance job was a $5 mixing gig on Fiverr. I'd been recording myself and my band for... — by Vicente G. Reyes"
     },
     {
-      "title": "Why using AI saves doctors time but won’t fix physician burnout",
-      "link": "https://theconversation.com/why-using-ai-saves-doctors-time-but-wont-fix-physician-burnout-291250",
-      "published": "2026-10-22T12:46:03.000Z",
+      "title": "The UK wants ‘AI sovereignty’ to cut its reliance on foreign tech – here’s how that can be achieved",
+      "link": "https://theconversation.com/the-uk-wants-ai-sovereignty-to-cut-its-reliance-on-foreign-tech-heres-how-that-can-be-achieved-295031",
+      "published": "2026-10-29T12:25:52.000Z",
       "source": "conversation",
       "sourceName": "The Conversation",
       "summary": ""
     },
     {
-      "title": "Buried Reads #1: Five Good Posts That Deserve More Attention",
-      "link": "https://dev.to/dj29/buried-reads-1-five-good-posts-that-deserve-more-attention-40ib",
-      "published": "2026-10-22T12:41:54.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "My own posts on DEV have ranged from a few hundred views to a few thousand, and I can't always tell... — by Dhruv Jani"
+      "title": "Driverless 18-wheelers are on a few highways, but widespread use is a long way down the road",
+      "link": "https://theconversation.com/driverless-18-wheelers-are-on-a-few-highways-but-widespread-use-is-a-long-way-down-the-road-291123",
+      "published": "2026-10-29T12:24:43.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
     },
     {
-      "title": "What telecoms leave behind when they exit a country",
-      "link": "https://globalvoices.org/2026/10/22/what-telecoms-leave-behind-when-they-exit-a-country/",
-      "published": "2026-10-22T12:20:06.000Z",
+      "title": "No Human Will Ever Write Code Better Than LLMs? Better at What?",
+      "link": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme",
+      "published": "2026-10-29T09:34:19.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "A tweet went around saying: \"No human will ever write code better than LLMs. Accept this fact, stop... — by Daniel Nwaneri"
+    },
+    {
+      "title": "You Don't Have a 2.0 Platform Proposal. You Have a Preference.",
+      "link": "https://dev.to/debashish_ghosal/you-dont-have-a-20-platform-proposal-you-have-a-preference-96h",
+      "published": "2026-10-29T09:00:00.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "You Don't Have a 2.0 Platform Proposal. You Have a Preference. You know the... — by Debashish Ghosal"
+    },
+    {
+      "title": "Python Automation vs. Web Development: Which Should You Learn First?",
+      "link": "https://dev.to/sameerqaiser17/python-automation-vs-web-development-which-should-you-learn-first-3hn5",
+      "published": "2026-10-29T07:55:39.000Z",
+      "source": "devto",
+      "sourceName": "DEV Community",
+      "summary": "📌 Quick Info Topic: An analysis of two major Python career paths Target Audience:... — by Sameer Qaiser"
+    },
+    {
+      "title": "Grok can launch a thousand ships – but this AI remake of the Odyssey can’t make us feel",
+      "link": "https://theconversation.com/grok-can-launch-a-thousand-ships-but-this-ai-remake-of-the-odyssey-cant-make-us-feel-295340",
+      "published": "2026-10-29T04:30:29.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
+    },
+    {
+      "title": "What would happen if the internet went down?",
+      "link": "https://theconversation.com/what-would-happen-if-the-internet-went-down-295249",
+      "published": "2026-10-28T23:56:38.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
+    },
+    {
+      "title": "France: three overlapping woes are fuelling a generation of discontent",
+      "link": "https://theconversation.com/france-three-overlapping-woes-are-fuelling-a-generation-of-discontent-295102",
+      "published": "2026-10-28T14:48:36.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
+    },
+    {
+      "title": "AI may quickly generate ideas, but working with people leads to more creative ones",
+      "link": "https://theconversation.com/ai-may-quickly-generate-ideas-but-working-with-people-leads-to-more-creative-ones-292417",
+      "published": "2026-10-28T12:20:49.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
+    },
+    {
+      "title": "What is artificial general intelligence – and is it already here?",
+      "link": "https://theconversation.com/what-is-artificial-general-intelligence-and-is-it-already-here-293600",
+      "published": "2026-10-28T12:11:48.000Z",
+      "source": "conversation",
+      "sourceName": "The Conversation",
+      "summary": ""
+    },
+    {
+      "title": "Bangladesh weighs tougher cyber law as AI-generated abuse targets women",
+      "link": "https://globalvoices.org/2026/10/28/bangladesh-weighs-tougher-cyber-law-as-ai-generated-abuse-targets-women/",
+      "published": "2026-10-28T07:51:42.000Z",
       "source": "globalvoices",
       "sourceName": "Global Voices",
-      "summary": "“While the network will continue to provide service to users, the transparency practices and internal procedures and protocols for data safeguards may change after a sale.”"
+      "summary": "Bangladesh’s proposed cyber law targets AI-generated fakes, but critics warn broad provisions on rumours, defamation and disinformation could revive censorship and threaten online free expression, even as victims need protection."
     },
     {
-      "title": "Update, things are coming together.",
-      "link": "https://dev.to/unitbuilds/update-things-are-coming-together-4lo3",
-      "published": "2026-10-22T08:59:07.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "So it's been a while and there's been some developments... Firstly, I joined YC startup school and... — by UnitBuilds"
-    },
-    {
-      "title": "What 2,698 open jobs at 10 AI companies say about where the labs are hiring",
-      "link": "https://dev.to/fast_data_asap/what-2698-open-jobs-at-10-ai-companies-say-about-where-the-labs-are-hiring-2den",
-      "published": "2026-10-22T06:46:50.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "Sales share, remote share and published engineering pay bands from the public job boards of OpenAI, Anthropic, Cursor, Harvey, ElevenLabs and five more, pulled on 20 Oct 2026. — by Fast Data"
-    },
-    {
-      "title": "The Developers Most Ready to Delegate to AI Are Also the Most Afraid of AI Replacing Developers",
-      "link": "https://dev.to/rbonweb/the-developers-most-ready-to-delegate-to-ai-are-also-the-most-afraid-of-ai-replacing-developers-27lg",
-      "published": "2026-10-22T06:45:00.000Z",
-      "source": "devto",
-      "sourceName": "DEV Community",
-      "summary": "JetBrains' 2026 data shows developers delegating more work to AI each year, and heavy AI agent users are the most convinced AI replacing developers is coming. — by Rohit Bhadani"
-    },
-    {
-      "title": "Shares in this data centre company are down 40% as investors lose faith in the AI story",
-      "link": "https://theconversation.com/shares-in-this-data-centre-company-are-down-40-as-investors-lose-faith-in-the-ai-story-294871",
-      "published": "2026-10-22T04:35:45.000Z",
+      "title": "People are using AI to make expensive computer programs free. This could change everything",
+      "link": "https://theconversation.com/people-are-using-ai-to-make-expensive-computer-programs-free-this-could-change-everything-294956",
+      "published": "2026-10-28T01:17:15.000Z",
       "source": "conversation",
       "sourceName": "The Conversation",
       "summary": ""
     },
     {
-      "title": "A critical flaw affecting 70% of all websites has the cybersecurity world panicked",
-      "link": "https://theconversation.com/a-critical-flaw-affecting-70-of-all-websites-has-the-cybersecurity-world-panicked-294941",
-      "published": "2026-10-22T00:43:33.000Z",
+      "title": "Most New Zealanders worry about AI’s risks, even as many expect to use it – new survey",
+      "link": "https://theconversation.com/most-new-zealanders-worry-about-ais-risks-even-as-many-expect-to-use-it-new-survey-294573",
+      "published": "2026-10-27T21:13:25.000Z",
       "source": "conversation",
       "sourceName": "The Conversation",
       "summary": ""
     },
     {
-      "title": "Palestine is already living under the Big Tech authoritarianism the world is being sold",
-      "link": "https://globalvoices.org/2026/10/21/palestine-is-already-living-under-the-big-tech-authoritarianism-the-world-is-being-sold/",
-      "published": "2026-10-21T20:19:57.000Z",
+      "title": "Warning Signals: Venezuela and the Risk of AI-Powered Chinese Digital Authoritarianism",
+      "link": "https://globalvoices.org/2026/10/27/warning-signals-venezuela-and-the-risk-of-ai-powered-chinese-digital-authoritarianism/",
+      "published": "2026-10-27T21:10:54.000Z",
       "source": "globalvoices",
       "sourceName": "Global Voices",
-      "summary": "Technologies developed, tested and refined under occupation do not stay there; they get exported to the rest of the world"
-    },
-    {
-      "title": "Could thoughtful ‘AI art’ counter the rise of ‘AI slop’? Why creatives today face a paradox",
-      "link": "https://theconversation.com/could-thoughtful-ai-art-counter-the-rise-of-ai-slop-why-creatives-today-face-a-paradox-294117",
-      "published": "2026-10-21T19:12:03.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "Are you using AI to study? Here’s how to do it well",
-      "link": "https://theconversation.com/are-you-using-ai-to-study-heres-how-to-do-it-well-294453",
-      "published": "2026-10-21T19:11:50.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "When Big Tech becomes a tool of state control in Kenya",
-      "link": "https://globalvoices.org/2026/10/21/when-big-tech-becomes-a-tool-of-state-control-in-kenya/",
-      "published": "2026-10-21T15:31:05.000Z",
-      "source": "globalvoices",
-      "sourceName": "Global Voices",
-      "summary": "Access Now's 2025 report found that at least 313 shutdowns were implemented globally, and that in Africa the Internet was shut down 30 times in 15 countries, with protests the leading trigger, followed by elections."
-    },
-    {
-      "title": "An AI model’s false tip to Philadelphia police reveals how digital agents can do as they’re told and still cause trouble",
-      "link": "https://theconversation.com/an-ai-models-false-tip-to-philadelphia-police-reveals-how-digital-agents-can-do-as-theyre-told-and-still-cause-trouble-294228",
-      "published": "2026-10-21T12:48:18.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "Why the most dangerous AI may be the one we trust too much",
-      "link": "https://theconversation.com/why-the-most-dangerous-ai-may-be-the-one-we-trust-too-much-293887",
-      "published": "2026-10-21T12:12:45.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "View from The Hill: Mathias Cormann offers blunt advice on countering populism and reforming the economy",
-      "link": "https://theconversation.com/view-from-the-hill-mathias-cormann-offers-blunt-advice-on-countering-populism-and-reforming-the-economy-294860",
-      "published": "2026-10-21T06:45:28.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "Using AI to plan your next holiday? Sometimes, too much information is just too much",
-      "link": "https://theconversation.com/using-ai-to-plan-your-next-holiday-sometimes-too-much-information-is-just-too-much-292686",
-      "published": "2026-10-20T19:03:10.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "How governments worldwide are shaping what AI can say about politics",
-      "link": "https://theconversation.com/how-governments-worldwide-are-shaping-what-ai-can-say-about-politics-294097",
-      "published": "2026-10-20T12:38:12.000Z",
-      "source": "conversation",
-      "sourceName": "The Conversation",
-      "summary": ""
-    },
-    {
-      "title": "Anthropic exposes AI operation that DRC journalists never knew existed",
-      "link": "https://globalvoices.org/2026/10/19/anthropic-exposes-ai-operation-that-drc-journalists-never-knew-existed/",
-      "published": "2026-10-19T20:11:30.000Z",
-      "source": "globalvoices",
-      "sourceName": "Global Voices",
-      "summary": "70 AI-powered fake news sites have generated 318 articles on the eastern DRC conflict, relations with Rwanda, and contested mineral resources."
+      "summary": "A report by the Australian think tank ASPI warns that Venezuela could integrate Chinese artificial intelligence into its surveillance system and expand its digital control capabilities."
     }
   ]
 }
